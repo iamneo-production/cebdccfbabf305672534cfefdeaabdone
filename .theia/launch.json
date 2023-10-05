@@ -1,3 +1,12 @@
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotationConfigApplicationContext;
-import org.sprngframework.context.support.
+import org.sprngframework.context.support.ClassPathXmlApplicationContext;
+public class Main{
+    public static viod main(String[] args){
+        ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
+        Student student=context.getBean("student",Student.class);
+        student.setStudentId(1);
+        student.setFirstName("John");
+        student.setLastName("doe");
+    }
+}
